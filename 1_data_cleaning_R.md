@@ -1,5 +1,5 @@
 
-# Data importing and cleaning!!!!!
+# Data importing and cleaning
 
 Typically, you will receive a dataset that is most likely in an Excel
 (`.xlsx` or `.xls`) or `.csv` (comma-separated values) format, which you
