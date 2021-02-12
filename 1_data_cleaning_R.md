@@ -1,5 +1,5 @@
 
-# Data importing and cleaning
+# Data importing and cleaning!!!!!
 
 Typically, you will receive a dataset that is most likely in an Excel
 (`.xlsx` or `.xls`) or `.csv` (comma-separated values) format, which you
@@ -78,7 +78,7 @@ observation and color-codes it by variable type. We could make it look
 nicer by adding the i42 theme, since this is a `ggplot` object.
 
 ``` r
-vis_dat(penguins_raw) 
+vis_dat(penguins_raw)
 ```
 
 ![](1_data_cleaning_R_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
@@ -87,7 +87,7 @@ Isn’t this cool? There’s also a function to see the degree of
 missingness for each of our variables. It’s called `vis_miss`:
 
 ``` r
-vis_miss(penguins_raw) 
+vis_miss(penguins_raw)
 ```
 
 ![](1_data_cleaning_R_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
@@ -141,26 +141,26 @@ model1 <- lm(flipper_length_mm ~ bill_length_mm + species, data = penguins)
 summary(model1)
 ```
 
-    ## 
+    ##
     ## Call:
     ## lm(formula = flipper_length_mm ~ bill_length_mm + species, data = penguins)
-    ## 
+    ##
     ## Residuals:
-    ##      Min       1Q   Median       3Q      Max 
-    ## -24.7485  -3.4135  -0.0681   3.6607  15.9965 
-    ## 
+    ##      Min       1Q   Median       3Q      Max
+    ## -24.7485  -3.4135  -0.0681   3.6607  15.9965
+    ##
     ## Coefficients:
-    ##                  Estimate Std. Error t value Pr(>|t|)    
+    ##                  Estimate Std. Error t value Pr(>|t|)
     ## (Intercept)      147.9511     4.1738  35.447   <2e-16 ***
     ## bill_length_mm     1.0828     0.1069  10.129   <2e-16 ***
     ## speciesChinstrap  -5.0039     1.3698  -3.653    3e-04 ***
     ## speciesGentoo     17.7986     1.1698  15.216   <2e-16 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
+    ##
     ## Residual standard error: 5.826 on 338 degrees of freedom
     ##   (2 observations deleted due to missingness)
-    ## Multiple R-squared:  0.8299, Adjusted R-squared:  0.8284 
+    ## Multiple R-squared:  0.8299, Adjusted R-squared:  0.8284
     ## F-statistic: 549.6 on 3 and 338 DF,  p-value: < 2.2e-16
 
 And now, a regression table!
@@ -177,23 +177,23 @@ huxreg(model1)
 ```
 
                ─────────────────────────────────────────────────
-                                                           (1)  
+                                                           (1)
                                        ─────────────────────────
-                 (Intercept)                       147.951 ***  
-                                                    (4.174)     
-                 bill_length_mm                      1.083 ***  
-                                                    (0.107)     
-                 speciesChinstrap                   -5.004 ***  
-                                                    (1.370)     
-                 speciesGentoo                      17.799 ***  
-                                                    (1.170)     
+                 (Intercept)                       147.951 ***
+                                                    (4.174)   
+                 bill_length_mm                      1.083 ***
+                                                    (0.107)   
+                 speciesChinstrap                   -5.004 ***
+                                                    (1.370)   
+                 speciesGentoo                      17.799 ***
+                                                    (1.170)   
                                        ─────────────────────────
-                 N                                 342          
-                 R2                                  0.830      
-                 logLik                          -1085.965      
-                 AIC                              2181.930      
+                 N                                 342        
+                 R2                                  0.830    
+                 logLik                          -1085.965    
+                 AIC                              2181.930    
                ─────────────────────────────────────────────────
-                 *** p < 0.001; ** p < 0.01; * p < 0.05.        
+                 *** p < 0.001; ** p < 0.01; * p < 0.05.
 
 Column names: names, model1
 
